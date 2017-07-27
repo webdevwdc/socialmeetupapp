@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nationality.LandingActivity">
+
+
+
+
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/btm_connection"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:background="@drawable/selected_state"
+            >
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="@dimen/btm_bar_icon_height_width"
+                android:layout_height="@dimen/btm_bar_icon_height_width"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btm_connection"/>
+
+            <TextView
+                android:id="@+id/tv_btm_connections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connections"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                android:layout_below="@+id/img1"
+                android:textSize="@dimen/btm_bar_txt_size"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/txt_reqst_counter_connection"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:text="2"
+                android:visibility="gone"
+                android:background="@drawable/rounded_red"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_alignTop="@+id/img1"
+                android:layout_alignEnd="@+id/img1" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm_meetups"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/selected_state"
+            >
+
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="@dimen/btm_bar_icon_height_width"
+                android:layout_height="@dimen/btm_bar_icon_height_width"
+                android:background="@drawable/btm_meetups"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_btm_meetups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meetups"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img11"
+                android:textSize="@dimen/btm_bar_txt_size"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/txt_reqst_counter_meetup"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:text="2"
+                android:visibility="gone"
+                android:background="@drawable/rounded_red"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_alignTop="@+id/img11"
+                android:layout_alignEnd="@+id/img11" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btm_msgs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/selected_state"
+            >
+
+            <ImageView
+                android:id="@+id/img111"
+                android:layout_width="@dimen/btm_bar_icon_height_width"
+                android:layout_height="@dimen/btm_bar_icon_height_width"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btm_messages"/>
+
+            <TextView
+                android:id="@+id/tv_btm_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messages"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img111"
+                android:textSize="@dimen/btm_bar_txt_size"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/txt_reqst_counter_chat"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:text="2"
+                android:visibility="gone"
+                android:background="@drawable/rounded_red"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_alignTop="@+id/img111"
+                android:layout_alignEnd="@+id/img111" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btm_bulletin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/selected_state"
+            >
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="@dimen/btm_bar_icon_height_width"
+                android:layout_height="@dimen/btm_bar_icon_height_width"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btm_bulletin"/>
+
+            <TextView
+                android:id="@+id/tv_btm_bulletins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bulletin"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img12"
+                android:textSize="@dimen/btm_bar_txt_size"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/txt_reqst_counter_bulletin"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:text="2"
+                android:visibility="gone"
+                android:background="@drawable/rounded_red"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_alignTop="@+id/img12"
+                android:layout_alignEnd="@+id/img12" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:background="@drawable/selected_state"
+            >
+
+            <ImageView
+                android:id="@+id/img121"
+                android:layout_width="@dimen/btm_bar_icon_height_width"
+                android:layout_height="@dimen/btm_bar_icon_height_width"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btm_me"/>
+
+            <TextView
+                android:id="@+id/tv_btm_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Me"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img121"
+                android:textSize="@dimen/btm_bar_txt_size"
+                android:textColor="#fff"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

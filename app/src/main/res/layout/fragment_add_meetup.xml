@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relative_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/app_blue_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+
+        <LinearLayout
+            android:id="@+id/lin_img_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_meetup_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:text="Add Meetup"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/header_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_bar">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_alignParentStart="true"
+       >
+
+        <EditText
+            android:id="@+id/edt_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/create_account_height"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_grey_border"
+            android:hint="--Enter Meetup Title/Activity Name"
+            android:textSize="@dimen/small_text_size"
+            android:inputType=""
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"/>
+
+        <LinearLayout
+            android:id="@+id/lin_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/edt_title">
+
+            <EditText
+                android:id="@+id/edt_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/create_account_height"
+                android:background="@drawable/rectangle_grey_border"
+                android:hint="Day"
+                android:layout_marginRight="20dp"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/small_text_size"
+                android:paddingLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/margin_10"/>
+
+            <EditText
+                android:id="@+id/edt_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/create_account_height"
+                android:background="@drawable/rectangle_grey_border"
+                android:hint="Time"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/small_text_size"
+                android:paddingLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/margin_10"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/create_account_height"
+            android:background="@drawable/rectangle_grey_border"
+            android:hint="Address"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/lin_date_time"
+            android:textSize="@dimen/small_text_size"
+            android:singleLine="true"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"/>
+
+        <EditText
+            android:id="@+id/edt_place"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/create_account_height"
+            android:background="@drawable/rectangle_grey_border"
+            android:hint="Place"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/edt_address"
+            android:textSize="@dimen/small_text_size"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"/>
+
+        <EditText
+            android:id="@+id/edt_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_page_logo"
+            android:layout_below="@+id/edt_place"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginTop="20dp"
+            android:hint="Add Notes, Talking Points &amp; Information here"
+            android:gravity="top"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="5dp"
+            android:background="@drawable/rectangle_grey_border"/>
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/edt_description">
+            <LinearLayout
+                android:id="@+id/ll_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+                <ImageView
+                    android:id="@+id/img_lock"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/plus"
+                    android:layout_margin="@dimen/margin_10"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Invite users"
+                    android:textAllCaps="true"
+                    android:layout_toRightOf="@+id/img_lock"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_chk_meetup_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Private"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/medium_text_size"
+                android:textStyle="bold"/>
+
+            <CheckBox
+                android:id="@+id/chk_meetup_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:button="@null"
+                android:text=" Posting as private"
+                android:drawableLeft="@drawable/custom_public_private_checkbox"
+                android:layout_toLeftOf="@+id/txt_chk_meetup_type"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp" />
+
+
+        </RelativeLayout>
+
+        <org.lucasr.twowayview.TwoWayView
+            style="@style/TwoWayView"
+            android:id="@+id/lv_friend_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/rel"
+            android:drawSelectorOnTop="false"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/btnCreateEvent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/create_account_height"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_below="@+id/lv_friend_list"
+            android:background="@color/green"
+            android:text="Create Meetup"
+            android:textSize="@dimen/medium_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/color_primary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Report User"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/header_text_size"/>
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/relativeLayout"
+    android:layout_below="@+id/rl_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dadada">
+
+<!--
+    <LinearLayout
+        android:id="@+id/linearlay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle">
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="0dp"
+            android:layout_weight="7.3"
+            android:layout_height="match_parent"
+            android:hint="Search.."
+            android:background="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textSize="16dp" />
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/search_icon"/>
+
+    </LinearLayout>
+-->
+
+
+    <LinearLayout
+        android:id="@+id/linearlay"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#D3D3D3"
+        android:layout_marginLeft="3dp"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:layout_below="@+id/relative_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Search.."
+                    android:inputType="text"
+                    android:textSize="@dimen/small_text_size"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/search_icon"
+                android:layout_weight="0.5"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearlay"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        >
+<!--
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/user_img"/>
+
+
+    <RelativeLayout
+        android:id="@+id/listSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/imgProfile"
+
+       >
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:text="Brayan William"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imgSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textViewName"
+        android:src="@drawable/msg_icon_small"
+       />
+    <TextView
+        android:id="@+id/text"
+        android:layout_toRightOf="@+id/imgSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+       android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewName"
+        android:text="Deerfield Beach/Istambul"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>
+</RelativeLayout>
+-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_Search">
+
+            <TextView
+                android:id="@+id/tv_no_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Connections Available."
+                android:visibility="gone"
+                android:textSize="@dimen/medium_text_size"
+                android:gravity="center_horizontal"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:scrollbars="vertical" />
+
+
+
+        </RelativeLayout>
+
+</LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

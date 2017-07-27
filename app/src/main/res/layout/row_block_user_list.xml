@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_alphabet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:textSize="22sp"
+    android:text="Alphabet text"/>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/rounded_image_height_width"
+            android:layout_height="@dimen/rounded_image_height_width"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_pic"
+            android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/medium_text_size"
+            />
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/msg_icon_small"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/mTextCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deerfield Beach/Istambul"
+            android:layout_toRightOf="@+id/message"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"/>
+
+           <Button
+               android:id="@+id/btn_unblock"
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:background="@drawable/blue_rounded_bg"
+               android:layout_marginRight="10dp"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:text="Unblock"
+               android:textColor="@color/white"
+               />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/profile_pic"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="#ccc"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

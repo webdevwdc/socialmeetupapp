@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relative_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/app_blue_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="My Meetups"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/header_text_size" />
+
+        <ImageView
+            android:id="@+id/img_filter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ico_filter"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"/>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/lin_search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#D3D3D3"
+            android:layout_gravity="center_vertical"
+            android:weightSum="3"
+
+            android:padding="5dp"
+            android:layout_below="@+id/relative_bar">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Search.."
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/search_icon"
+                android:layout_weight="0.5"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_bulletin_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/lin_search">
+
+        <Button
+            android:id="@+id/btn_create_bulletin"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@drawable/btn_rounded_bg"
+            android:text="MY MEETUP"
+            android:textColor="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/lin_bulletin_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:weightSum="5"
+        android:gravity="right"
+        android:layout_marginRight="@dimen/margin_10"
+       >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/plus"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/tv_add_meetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Meetups"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:id="@+id/vw"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@+id/rel_bulletin_parent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/vw">
+
+            <TextView
+                android:id="@+id/tv_no_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Meetups Found."
+                android:visibility="gone"
+                android:textSize="@dimen/medium_text_size"
+                android:gravity="center_horizontal"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:id="@+id/relative_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/app_blue_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_centerInParent="true"
+            android:text="Meetups"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/header_text_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_header"
+            android:layout_toLeftOf="@+id/img_filter"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:gravity="center_horizontal">
+
+
+            <ImageView
+                android:id="@+id/img_con_req"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txt_reqst"
+                android:src="@drawable/meetup_req" />
+
+
+
+            <TextView
+                android:id="@+id/txt_reqst_counter"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:text="0"
+                android:gravity="center|center_vertical"
+                android:visibility="gone"
+                android:background="@drawable/rounded_red"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:layout_alignEnd="@+id/img_con_req" />
+
+
+
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:id="@+id/img_filter"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ico_filter"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"/>
+        </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/rel_bulletin_parent"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:weightSum="3"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/relative_bar">
+
+        <TextView
+            android:id="@+id/btn_my_meetup"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:gravity="center|center_vertical"
+            android:layout_weight="0.9"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_rounded_bg"
+            android:text="My Meetups"
+            android:textAllCaps="false"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/white" />
+
+        <!--==========================================-->
+
+
+        <LinearLayout
+            android:id="@+id/lin_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_hight"
+            android:background="#D3D3D3"
+            android:layout_weight="1.2"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="center_vertical"
+            android:weightSum="3"
+
+            android:padding="4dp"
+            android:layout_below="@+id/relative_bar">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.4"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Search.."
+                    android:textSize="@dimen/small_text_size"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:src="@drawable/search_icon"
+                android:layout_weight="0.7"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_bulletin_parent"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.9"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/margin_10"
+           >
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/plus"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/tv_add_meetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Meetup"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/vw"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/rel_bulletin_parent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/vw">
+
+            <TextView
+                android:id="@+id/tv_no_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/medium_text_size"
+                android:visibility="gone"
+                android:text="No Meetups Found."/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_marginTop="2dp"
+                android:background="#fff"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/main_cmnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        >
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/small_rounded_image_height_width"
+            android:layout_height="@dimen/small_rounded_image_height_width"
+            android:layout_marginLeft="10dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alexa"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/profile_pic"
+            android:layout_alignTop="@+id/profile_pic"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/txt_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I will be able to join little late, but will most certainly be down to go with everyone to a taverna afterwards!"
+            android:layout_toRightOf="@+id/profile_pic"
+            android:layout_below="@+id/txt_name"
+            android:layout_alignLeft="@+id/txt_name"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03.05.2017 at 6.24pm"
+            android:layout_toRightOf="@+id/profile_pic"
+            android:layout_below="@+id/txt_comment"
+            android:layout_alignLeft="@+id/txt_name"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/light_grey_txt"
+            />
+
+        <LinearLayout
+            android:id="@+id/lin_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt_name"
+
+            android:layout_below="@+id/tv_date_time">
+            <TextView
+                android:id="@+id/tv_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="50 likes"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_gravity="center|center_horizontal"
+                android:gravity="center_vertical"
+                android:layout_alignLeft="@+id/txt_name"/>
+
+            <ImageView
+                android:id="@+id/like_btn"
+                android:layout_width="25dp"
+                android:layout_height="10dp"
+                android:src="@drawable/meetup_like"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/tv_likes"
+                android:layout_alignBottom="@+id/tv_likes"
+                />
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_toRightOf="@+id/like_btn"
+                android:layout_below="@+id/tv_date_time"
+                android:text="/ 3 reply"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+       <!-- <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/txt_name"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lin_row"
+            android:scrollbars="vertical" />-->
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

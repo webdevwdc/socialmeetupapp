@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_primary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:text="Bulletin Response"
+            android:textColor="#fff"
+            android:textSize="@dimen/header_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_12"
+        android:layout_below="@+id/ll_header">
+
+            <RelativeLayout
+                android:id="@+id/relative_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/profile_pic"/>
+
+
+                <ImageView
+                    android:id="@+id/img_clock1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ul_watchico"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@+id/txt_name2" />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/img_clock1"
+                    android:layout_below="@+id/txt_name2"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/relative_img"
+                android:background="@drawable/rectangle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp">
+
+
+                <TextView
+                    android:id="@+id/txt_msg"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/small_text_size"
+                    android:text=""/>
+
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/ext_msg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_page_logo"
+            android:hint="--Your Content goes here--"
+            android:padding="@dimen/margin_10"
+            android:gravity="top|center_vertical"
+            android:layout_below="@+id/relative"
+            android:layout_margin="@dimen/margin_12"
+            android:inputType="textCapSentences"
+            android:background="@drawable/rectangle_blue_border"
+            android:textSize="@dimen/medium_text_size"
+            android:layout_marginTop="@dimen/margin_12"/>
+
+        <Button
+            android:id="@+id/btn_respond"
+            android:layout_below="@+id/ext_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:layout_marginTop="30dp"
+            android:text="Respond"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:layout_margin="@dimen/margin_12"
+            />
+
+    </RelativeLayout>
+

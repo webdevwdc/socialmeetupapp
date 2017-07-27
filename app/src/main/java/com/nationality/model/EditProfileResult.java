@@ -1,0 +1,43 @@
+
+package com.nationality.model;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class EditProfileResult {
+
+    @SerializedName("error")
+    @Expose
+    private Boolean error;
+    @SerializedName("data")
+    @Expose
+    private EditProfileData data;
+    @SerializedName("message")
+    @Expose
+    private String message;
+
+    public Boolean getError() {
+        return error;
+    }
+
+    public void setError(Boolean error) {
+        this.error = error;
+    }
+
+    public EditProfileData getData() {
+        return data;
+    }
+
+    public void setData(EditProfileData data) {
+        this.data = data;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+}

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/color_primary">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Privacy Settings"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/header_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="12dp"
+        android:layout_below="@+id/ll_header">
+
+       <!-- <RadioGroup
+            android:id="@+id/radiogGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >-->
+
+            <CheckBox
+                android:id="@+id/chk_anyone_find"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:button="@null"
+                android:drawableRight="@drawable/radiobutton_drawable"
+                android:checked="false"
+                android:text="Let anyone find me"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                />
+
+            <CheckBox
+                android:id="@+id/chk_anyone_see_my_pro_con"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:button="@null"
+                android:drawableRight="@drawable/radiobutton_drawable"
+                android:text="Let anyone see my profile content"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_below="@+id/chk_anyone_find"/>
+            <CheckBox
+                android:id="@+id/chk_evone_see_my_blletin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"
+                android:button="@null"
+                android:visibility="gone"
+                android:drawableRight="@drawable/radiobutton_drawable"
+                android:text="Anyone see my bulletin posts"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_below="@+id/chk_anyone_see_my_pro_con"
+                />
+        <!--</RadioGroup>-->
+
+        <TextView
+            android:id="@+id/txt_mile_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Connect distance (miles)"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_alignLeft="@+id/chk_evone_see_my_blletin"
+            android:layout_below="@+id/chk_anyone_see_my_pro_con"/>
+
+        <com.appyvet.rangebar.RangeBar
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rangebar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:tickStart="0"
+            android:visibility="gone"
+            custom:tickInterval="1"
+            custom:tickEnd="50"
+            android:layout_below="@+id/txt_mile_head"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+
+        <com.appyvet.rangebar.RangeBar
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rangebar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            custom:rangeBar="false"
+            custom:tickInterval="1"
+            custom:tickEnd="75"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/chk_evone_see_my_blletin"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rangebar"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/txt_mileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"/>
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_below="@+id/rangebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:layout_marginTop="30dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="@color/green"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

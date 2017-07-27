@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_alphabet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:textSize="22sp"
+    android:text="Alphabet text"/>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/rounded_image_height_width"
+            android:layout_height="@dimen/rounded_image_height_width"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_img"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/lin_date_time"
+            android:layout_width="@dimen/rounded_image_height_width"
+            android:layout_height="@dimen/rounded_image_height_width"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:weightSum="2"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="right|center_horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/calendar_icon"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="03/7"
+                    android:gravity="right|center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="right|center_horizontal">
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/watch_icon"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:text="6PM"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lin_date_time"
+            android:layout_centerVertical="true">
+
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Joe Down"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:textColor="@color/black"
+                android:layout_alignTop="@+id/img_msg"
+                android:layout_alignBottom="@+id/img_msg"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:id="@+id/vw_grey_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@color/grey"
+                android:layout_below="@+id/txt_time"/>
+
+            <TextView
+                android:id="@+id/txt_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text=""
+                android:layout_toRightOf="@+id/message"
+                android:layout_below="@+id/vw_grey_line"
+                android:textSize="@dimen/small_text_size"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@drawable/blue_talkbg"
+                />
+
+
+            <!-- <ImageView
+                 android:layout_width="35dp"
+                 android:layout_height="35dp"
+                 android:src="@drawable/msg_icon_big"
+                 android:layout_marginRight="30dp"
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentRight="true"
+                 />-->
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp"
+            android:background="#ccc"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

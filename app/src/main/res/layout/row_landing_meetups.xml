@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/tv_meetup_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_profile"
+            android:layout_toLeftOf="@+id/img_calender"
+            android:layout_toRightOf="@+id/img_profile"
+            android:paddingRight="4dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text_size"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:text=""/>
+        <TextView
+            android:id="@+id/total_users_added"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/rounded"
+            android:text="0"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignTop="@+id/img_clock"
+            android:layout_alignLeft="@+id/tv_meetup_title"
+            android:layout_alignStart="@+id/tv_meetup_title" />
+
+        <TextView
+            android:id="@+id/text_added"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="people are added"
+            android:textSize="13sp"
+            android:layout_marginLeft="3dp"
+            android:layout_alignTop="@+id/total_users_added"
+            android:layout_toRightOf="@+id/total_users_added"
+            android:layout_toLeftOf="@+id/img_clock"
+            android:layout_below="@+id/tv_meetup_title"/>
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:id="@+id/img_calender"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/small_icon_height_width"
+            android:src="@drawable/ul_calenico"
+            android:layout_marginRight="5dp"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@+id/text_date"/>
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6:30 PM"
+            android:textSize="@dimen/small_text_size"
+            android:textStyle="normal"
+            android:layout_marginRight="0dp"
+            android:layout_alignTop="@+id/img_clock"
+            android:layout_alignBottom="@+id/img_clock"
+            android:layout_below="@+id/text_date"
+            android:layout_alignLeft="@+id/text_date"
+            />
+
+
+        <ImageView
+            android:id="@+id/img_clock"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/small_icon_height_width"
+            android:src="@drawable/ul_watchico"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:layout_alignLeft="@+id/img_calender"
+            android:layout_below="@+id/img_calender"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

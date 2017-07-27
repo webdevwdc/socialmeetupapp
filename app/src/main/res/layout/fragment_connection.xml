@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/app_blue_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="Connections"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_text_size" />
+
+        <TextView
+            android:id="@+id/txt_reqst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="Requests"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size" />
+
+
+
+        <ImageView
+            android:id="@+id/img_con_req"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/txt_reqst"
+            android:src="@drawable/top_req" />
+
+        <LinearLayout
+            android:id="@+id/lin_requests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/img_con_req"
+            android:orientation="vertical"></LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_reqst_counter"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:text="0"
+            android:gravity="center|center_vertical"
+            android:visibility="gone"
+            android:background="@drawable/rounded_red"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/txt_reqst"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_bar">
+
+        <!--        <LinearLayout
+            android:id="@+id/lin_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_hight"
+            android:background="#D3D3D3"
+            android:layout_weight="1.2"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="center_vertical"
+            android:weightSum="3"
+
+            android:padding="4dp"
+            android:layout_below="@+id/relative_bar">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.4"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Search.."
+                    android:textSize="@dimen/small_text_size"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="7dp"
+                android:src="@drawable/search_icon"
+                android:layout_weight="0.7"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+-->
+
+        <RelativeLayout
+            android:id="@+id/relative_Search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:weightSum="3">
+                <LinearLayout
+                    android:id="@+id/lin_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#D3D3D3"
+                    android:layout_weight="2.2"
+                    android:layout_marginLeft="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:weightSum="3"
+
+                    android:padding="5dp"
+                    android:layout_below="@+id/relative_bar">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:weightSum="3">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:id="@+id/edt_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:hint="Search.."
+                                android:inputType="text"
+                                android:textSize="@dimen/small_text_size"
+                                android:singleLine="true"
+                                android:paddingLeft="10dp"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="8dp"
+                            android:src="@drawable/search_icon"
+                            android:layout_weight="0.4"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/txt_add"
+                    android:layout_width="0dp"
+                    android:layout_weight=".8"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/plus"
+                        android:layout_toLeftOf="@+id/tv_add"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_no_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/medium_text_size"
+            android:visibility="gone"
+            android:text="No Connections."/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_below="@+id/relative_Search">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+            <com.debjit.alphabetscroller.RecyclerViewFastScroller
+                android:id="@+id/fast_scroller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <!-- <android.support.v7.widget.RecyclerView
+         android:id="@+id/my_recycler_view"
+         android:scrollbars="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+
+     <com.viethoa.RecyclerViewFastScroller
+         android:id="@+id/fast_scroller"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentRight="true"/>-->
+
+</RelativeLayout>

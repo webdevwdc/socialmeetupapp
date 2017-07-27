@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/main_cmnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/img_profile_pic"
+            android:layout_width="@dimen/small_rounded_image_height_width"
+            android:layout_height="@dimen/small_rounded_image_height_width"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/img_profile_pic"
+            android:layout_alignTop="@+id/img_profile_pic"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/txt_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@+id/profile_pic"
+            android:layout_below="@+id/txt_name"
+            android:layout_alignLeft="@+id/txt_name"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@+id/profile_pic"
+            android:layout_below="@+id/txt_comment"
+            android:layout_alignLeft="@+id/txt_name"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:textColor="@color/light_grey_txt"
+            />
+
+        <LinearLayout
+            android:id="@+id/lin_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt_name"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_date_time">
+            <TextView
+                android:id="@+id/tv_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="0 like"
+                android:gravity="center_vertical"
+                android:layout_alignLeft="@+id/txt_name"/>
+
+            <ImageView
+                android:id="@+id/img_like"
+                android:layout_width="25dp"
+                android:layout_height="10dp"
+                android:src="@drawable/meetup_like"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/tv_likes"
+                android:layout_alignBottom="@+id/tv_likes"
+                />
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_like"
+                android:layout_below="@+id/tv_date_time"
+                android:text="/ 3 reply"
+                android:visibility="invisible"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

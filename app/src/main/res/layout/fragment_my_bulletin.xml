@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.nationality.fragment.FragmentLanding">
+
+    <RelativeLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:orientation="horizontal"
+        android:background="@color/app_blue_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="My Bulletins"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fm_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:layout_below="@+id/ll_header"
+        android:gravity="left|center_vertical"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_user"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:gravity="left|center_vertical"
+            android:text="USER"
+            android:visibility="invisible"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginLeft="@dimen/margin_10"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="TOPIC"
+            android:layout_marginLeft="@dimen/margin"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/small_text_size"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:gravity="right|center_vertical"
+            android:text="DATE/TIME"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginRight="@dimen/margin_10"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/medium_text_size"
+        android:visibility="gone"
+        android:text="No Bulletins Found."/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fm_header"
+        android:visibility="visible"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_bulletins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+        <com.debjit.alphabetscroller.RecyclerViewFastScroller
+            android:id="@+id/fast_scroller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

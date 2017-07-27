@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rel_respond_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_profile_pic"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kenan Demren"
+                android:layout_alignRight="@+id/img_profile_pic"
+                android:textSize="@dimen/extra_small_text_size"
+                android:gravity="center|center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/img_profile_pic"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_details_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/relative_img"
+            android:layout_marginLeft="5dp">
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/setting_row_grey"
+                android:layout_marginLeft="0dp">
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/small_text_size"
+                android:text="@string/lorem_ipsum_text"/>
+
+            <TextView
+                android:id="@+id/txt_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_comment"
+                android:layout_alignLeft="@+id/tv_comment"
+                android:text="03.07.2017 at 6.24 pm"
+                android:textSize="@dimen/small_text_size"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_like"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/rel"
+                android:layout_marginTop="10dp"
+                android:paddingRight="5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@color/app_blue_color1">
+
+                <TextView
+                    android:id="@+id/tv_like_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Like "
+                    android:textSize="@dimen/xtra_small_text_size"
+                    android:layout_marginRight="7dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_width="@dimen/small_icon_height_width"
+                    android:layout_height="@dimen/small_icon_height_width"
+
+                    android:src="@drawable/meetup_like_btn"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/rel"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_toRightOf="@+id/lin_like"
+                android:layout_marginTop="10dp"
+                android:paddingRight="5dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@color/app_blue_color1">
+
+                <TextView
+                    android:id="@+id/tv_reply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reply "
+                    android:textSize="@dimen/xtra_small_text_size"
+                    android:layout_marginRight="7dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_width="@dimen/small_icon_height_width"
+                    android:layout_height="@dimen/small_icon_height_width"
+                    android:src="@drawable/ico_comments"
+
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_reply_count"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="(2) Replies"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/xtra_small_text_size"
+                android:layout_toLeftOf="@+id/tv_like_count"
+                android:layout_below="@+id/rel"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/tv_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="(2) Likes"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/xtra_small_text_size"
+                android:layout_below="@+id/rel"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

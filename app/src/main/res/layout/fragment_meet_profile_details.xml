@@ -1,0 +1,740 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nationality.fragment.FragmentMeetProfileDetails">
+
+    <RelativeLayout
+        android:id="@+id/relative_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/app_blue_color">
+
+        <ImageView
+            android:id="@+id/img_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:src="@drawable/ic_arrow_back_white_24dp"/>
+        <LinearLayout
+            android:id="@+id/lin_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:layout_alignRight="@+id/img_back1">
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:src="@drawable/edit_action" />
+
+        <LinearLayout
+            android:id="@+id/lin_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_alignLeft="@+id/img_edit">
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ico_join_meetup"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Join"
+            android:src="@drawable/join"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+
+          />
+
+        <ImageView
+            android:id="@+id/ico_un_join_meetup"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Join"
+            android:src="@drawable/unjoin"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+           />
+
+        <TextView
+            android:id="@+id/txt_meetup_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_toRightOf="@+id/lin_back"
+            android:layout_toLeftOf="@+id/lin_edit"
+            android:layout_marginRight="25dp"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_bar"
+        android:background="@color/black_bg_color">
+        <TextView
+            android:id="@+id/txt_title_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="4dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="@dimen/medium_text_size"
+            android:textStyle="bold"
+            android:maxLines="3"
+            android:layout_marginLeft="@dimen/margin_10"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_meetup_details_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_title_bar"
+        android:padding="10dp"
+        android:background="@color/dark_black">
+
+
+        <LinearLayout
+            android:id="@+id/lin_people_added"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_margin="0dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_people_added_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/app_blue_color1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="0"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txt_people_added"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/meetup_like"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:layout_margin="3dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/green">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LIKE"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="2dp"
+                        android:textSize="@dimen/xtra_small_text_size"
+                        android:textColor="@color/white"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/small_icon_height_width"
+                        android:layout_height="@dimen/small_icon_height_width"
+                        android:src="@drawable/meetup_likebtn_icon"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/meetup_comment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/app_blue_color1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COMMENT"
+                        android:textSize="@dimen/xtra_small_text_size"
+                        android:paddingRight="4dp"
+                        android:textColor="@color/white"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/small_icon_height_width"
+                        android:layout_height="@dimen/small_icon_height_width"
+                        android:src="@drawable/ico_comments"
+
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_date_time"
+            android:layout_below="@+id/lin_people_added"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="1dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/small_icon_height_width"
+                android:layout_height="@dimen/small_icon_height_width"
+                android:src="@drawable/meetup_calendar"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:textSize="11sp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="@dimen/small_icon_height_width"
+                android:layout_height="@dimen/small_icon_height_width"
+                android:text="at"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:visibility="visible"
+                />
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:gravity="center_vertical"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/txt_view_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/txt_color_blue"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/xxsmall"
+                    android:text="0 Views"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/txt_color_blue"/>
+                <TextView
+                    android:id="@+id/txt_comment_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/xxsmall"
+                    android:textColor="@color/txt_color_blue"
+                    android:gravity="center_horizontal"
+                    android:text="0 Replies"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/txt_color_blue"/>
+
+                <TextView
+                    android:id="@+id/txt_like_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/xxsmall"
+                    android:textColor="@color/txt_color_blue"
+                    android:gravity="center_horizontal"
+                    android:text="0 Likes"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:layout_below="@+id/rel_meetup_details_view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relative_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="@dimen/square_image_width"
+                    android:layout_height="@dimen/square_image_height"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Name area"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/img_profile"/>
+
+               <!-- <ImageView
+                    android:id="@+id/img_msg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/img_profile"
+                   android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/location_icon"/>
+
+                <TextView
+                    android:id="@+id/txt_user_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="meetup location"
+                    android:layout_below="@+id/txt_name"
+                    android:gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:layout_toRightOf="@+id/img_msg"/>-->
+                <RelativeLayout
+                    android:id="@+id/rel_meetup_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible"
+                    android:padding="4dp"
+                    android:layout_below="@+id/txt_name"
+                    android:layout_toRightOf="@+id/img_profile"
+                    android:background="@color/grey_new">
+
+                    <ImageView
+                        android:id="@+id/img_address"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/meetup_map_black"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="1dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_user_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:padding="4dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_toRightOf="@+id/img_address"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relative_address_parent"
+                android:layout_below="@+id/relative_pic"
+                android:background="@drawable/row_back"
+                android:layout_marginTop="15dp">
+                <RelativeLayout
+                    android:id="@+id/relative_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:background="@color/green"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/txt_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="Description"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relative_describ"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/relative_address"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/txt_desc_text"
+                        android:textSize="13sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text=""/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rel_respond_comment"
+                android:layout_below="@+id/relative_address_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/relative_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/profile_pic"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_response_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:layout_below="@+id/profile_pic"/>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_latest_comment_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/relative_img"
+                    android:background="@drawable/gry_cmnt_bg"
+                    android:layout_marginLeft="@dimen/margin_10">
+
+
+                    <TextView
+                        android:id="@+id/txt_latest_comment"
+                        android:layout_margin="@dimen/margin_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/small_text_size"
+                        android:textColor="@color/black"
+                        android:text=""/>
+                    <TextView
+                        android:id="@+id/txt_latest_comment_date_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginBottom="5dp"
+                        android:layout_below="@+id/txt_latest_comment"/>
+
+                    <!--=============================-->
+
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:id="@+id/rel_latest_like_replies_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rel_latest_comment_parent"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_alignLeft="@+id/rel_latest_comment_parent"
+                    android:layout_marginTop="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/txt_latest_comment_like_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="5"
+                            android:textColor="@color/black"/>
+                        <ImageView
+                            android:id="@+id/img_latest_comment_like"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/meetup_like"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true">
+                        <TextView
+                            android:id="@+id/txt_latest_comment_reply_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Replies"
+                            android:textSize="@dimen/small_text_size"
+                            android:visibility="gone"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/lin_like_replies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_below="@+id/rel_latest_like_replies_parent"
+                    android:layout_alignLeft="@+id/rel_latest_comment_parent">
+                    <LinearLayout
+                        android:id="@+id/meet_cmnt_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="end|center_horizontal"
+                        android:background="@color/green"
+                        android:layout_marginRight="5dp">
+
+
+                        <TextView
+                            android:id="@+id/txt_like_latest_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="LIke"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/small_text_size"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="5dp"/>
+
+                        <ImageView
+                            android:id="@+id/img_latest_like"
+                            android:layout_width="@dimen/small_icon_height_width"
+                            android:layout_height="@dimen/small_icon_height_width"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:src="@drawable/meetup_likebtn_icon"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:layout_gravity="right|center_vertical"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/meet_comment_reply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="end|center_horizontal"
+                        android:background="@color/app_blue_color1"
+                        android:layout_marginRight="5dp">
+                        <TextView
+                            android:id="@+id/txt_reply_latest_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reply"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/small_text_size"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="5dp"/>
+                        <ImageView
+                            android:id="@+id/img_reply_latest_comment"
+                            android:layout_width="@dimen/small_icon_height_width"
+                            android:layout_height="@dimen/small_icon_height_width"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:src="@drawable/ico_comments"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:layout_gravity="right|center_vertical"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/rel_respond_comment">
+                <ImageView
+                    android:id="@+id/img_plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/plus"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txt_total_attendies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/img_plus"
+                    android:layout_centerVertical="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Attendees (0)"/>
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="See All"/>
+
+            </RelativeLayout>
+           <!-- <org.lucasr.twowayview.TwoWayView
+                android:layout_below="@+id/relative_add"
+                style="@style/TwoWayView"
+                android:id="@+id/lv_friend_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:drawSelectorOnTop="false"
+                android:visibility="visible" />-->
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_add"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+    <View
+        android:id="@+id/no_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#fff"/>
+
+
+</RelativeLayout>

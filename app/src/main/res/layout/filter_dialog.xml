@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rectangle">
+
+        <RelativeLayout
+            android:id="@+id/relative_title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+        <TextView
+            android:id="@+id/txt_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter By:"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary"
+            android:textSize="22sp"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_choose"
+            android:layout_below="@+id/relative_title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="5dp"
+                android:id="@+id/first_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_selectOne"
+                android:text="Activity Type"
+                android:textColor="#000000"
+                style="@style/MyRadioButtonStyle"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:checked="true"
+                android:layout_weight="1"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/radio_selectTwo"
+                android:text="Date/Time"
+                android:padding="5dp"
+                android:textColor="#000000"
+                style="@style/MyRadioButtonStyle"
+                android:textSize="13sp"
+                android:layout_weight="1"
+                android:textStyle="normal" />
+
+            <RadioButton
+
+                android:id="@+id/radio_selectThree"
+                android:text="Date/Time"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                style="@style/MyRadioButtonStyle"
+                android:textStyle="normal" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/relative_choose"
+            android:background="@drawable/reactangle_conn">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_height="match_parent">
+
+            </Spinner>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d3d3d3"
+            android:layout_below="@+id/relative"/>
+
+        <LinearLayout
+            android:layout_below="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/rel2"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cancel"
+                android:id="@+id/txt_cancel"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Submit"
+                android:id="@+id/txt_submit"
+                android:layout_weight="1"
+                android:textColor="@color/color_primary"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
